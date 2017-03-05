@@ -10,7 +10,7 @@ require_relative 'repodumper'
 module Repodata
   class FedoraRepoDumper < RepoDumper
     protected
-    def dump_imp
+    def dump
       file_contents = @file.read
       tmpfile = Tempfile.new('repodata')
       tmpfile.write(file_contents)
