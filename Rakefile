@@ -1,6 +1,6 @@
 require 'rubygems/package_task'
 
-spec = Gem::Specification.new do |s| 
+SPEc = Gem::Specification.new do |s| 
   s.name       = "repodata"
   s.summary    = "Get distro package names and versions"
   s.description= File.read(File.join(File.dirname(__FILE__), 'README'))
