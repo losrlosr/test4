@@ -1,0 +1,72 @@
+repodata
+========
+
+What is it?
+-----------
+
+repodata is a Ruby program which provides a common method of accessing package
+lists and package versions from various Linux distributions.
+Use it to find out if a package exists in a particular distribution and what
+version it is.
+Future work includes description and changelog support.
+
+Requirements
+------------
+
+Ruby 1.9 - http://www.ruby-lang.org
+sqlite3 gem - http://rubygems.org/gems/sqlite3
+
+Installation
+------------
+
+See the separate file, INSTALL.
+
+Using
+-----
+
+Make a config file with the source urls in it. For example:
+>>> cat ubuntu-14.04.config
+name = Ubuntu
+version = 14.04
+url.debian = http://archive.ubuntu.com/ubuntu/dists/trusty/main/source/Sources.bz2
+url.debian = http://archive.ubuntu.com/ubuntu/dists/trusty/multiverse/source/Sources.bz2
+url.debian = http://archive.ubuntu.com/ubuntu/dists/trusty/restricted/source/Sources.bz2
+url.debian = http://archive.ubuntu.com/ubuntu/dists/trusty/universe/source/Sources.bz2
+url.debian = http://archive.ubuntu.com/ubuntu/dists/trusty-security/main/source/Sources.bz2
+url.debian = http://archive.ubuntu.com/ubuntu/dists/trusty-security/multiverse/source/Sources.bz2
+url.debian = http://archive.ubuntu.com/ubuntu/dists/trusty-security/restricted/source/Sources.bz2
+url.debian = http://archive.ubuntu.com/ubuntu/dists/trusty-security/universe/source/Sources.bz2
+url.debian = http://archive.ubuntu.com/ubuntu/dists/trusty-updates/main/source/Sources.bz2
+url.debian = http://archive.ubuntu.com/ubuntu/dists/trusty-updates/multiverse/source/Sources.bz2
+url.debian = http://archive.ubuntu.com/ubuntu/dists/trusty-updates/restricted/source/Sources.bz2
+url.debian = http://archive.ubuntu.com/ubuntu/dists/trusty-updates/universe/source/Sources.bz2
+
+Run the program:
+>>> repodata <config>
+<long list of packages>
+
+Contributing
+------------
+
+To run from inside the source tree:
+>>> RUBYLIB=lib bin/repodata <config>
+
+Fork it on GitHub, hack away, and then send a pull request.
+
+See more at https://github.com/rosslagerwall/repodata
+
+Licensing
+---------
+
+This program is free software: you can redistribute it and/or modify it under
+the terms of the GNU General Public License as published by the Free Software
+Foundation, either version 2 of the License, or (at your option) any later
+version.
+
+Please see the file called COPYING for more details.
+
+Latest Version
+--------------
+
+Details of the latest version can be found on the repodata project page at
+https://github.com/rosslagerwall/repodata
